@@ -31,172 +31,247 @@ canvas#confetti-canvas {
 html, body {
   height: 100%;
 }
-html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "bree regular", sans-serif;
+
+body {
+  overflow-x: hidden;
 }
-html #header, body #header {
-  position: relative;
-  height: 85%;
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "BoldenVan", sans-serif;
 }
-html #header .logo, body #header .logo {
+body .countdown {
   position: absolute;
-  top: 61%;
-  left: 50%;
-  margin-left: -290px;
-  text-align: center;
-  height: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1234;
+  background-color: rgba(255, 255, 255, 0.25);
 }
-html #header .logo img, body #header .logo img {
-  width: 580px;
-  height: auto;
+body.admin-bar .countdown {
+  top: 32px;
 }
-html #header div, body #header div {
-  height: 100%;
-}
-html #header .col-lg-4, body #header .col-lg-4 {
+body #header {
+  position: relative;
+  height: 60%;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  text-align: center;
-  background-color: #FFD000;
-  background-blend-mode: overlay;
-  background-position: center;
+  background-color: #5B2E88;
+  background-image: url(../img/bg-header.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
-html #header .col-lg-4#acurui_hd, body #header .col-lg-4#acurui_hd {
-  background-image: url(../img/acurui.webp);
+body #header .custom-logo-link {
+  display: block;
+  text-align: center;
+  margin: auto;
 }
-html #header .col-lg-4#acurui_hd:hover, body #header .col-lg-4#acurui_hd:hover {
-  background-image: url(../img/acurui-hover.webp);
+body #header .custom-logo-link img {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
 }
-html #header .col-lg-4#itabirito_hd, body #header .col-lg-4#itabirito_hd {
-  background-image: url(../img/estacao.webp);
+body #header ul.menu {
+  margin: 1rem auto;
+  list-style: none;
+  text-align: center;
 }
-html #header .col-lg-4#itabirito_hd:hover, body #header .col-lg-4#itabirito_hd:hover {
-  background-image: url(../img/reinaldinho.webp);
+body #header ul.menu li {
+  display: inline-block;
+  margin: 0.75rem;
 }
-html #header .col-lg-4#sgbacao_hd, body #header .col-lg-4#sgbacao_hd {
-  background-image: url(../img/bacao.webp);
-}
-html #header .col-lg-4#sgbacao_hd:hover, body #header .col-lg-4#sgbacao_hd:hover {
-  background-image: url(../img/bacao-hover.webp);
-}
-html #header .col-lg-4:hover, body #header .col-lg-4:hover {
-  background-blend-mode: normal;
-}
-html #header .col-lg-4 h3, html #header .col-lg-4 h4, body #header .col-lg-4 h3, body #header .col-lg-4 h4 {
-  margin-bottom: auto;
-  margin-top: 2rem;
-  font-family: "BoldenVan";
-}
-html #header .col-lg-4 a, body #header .col-lg-4 a {
-  color: #fff;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+body #header ul.menu li a {
+  display: block;
+  background-color: #E75511;
+  border-radius: 2rem;
+  padding: 8px 20px;
+  color: #FFF;
+  font-weight: 700;
   text-decoration: none;
 }
-html #reinaldo, body #reinaldo {
-  position: relative;
-  overflow: hidden;
-  background-image: url(../img/bg-flor.webp);
-  background-repeat: no-repeat;
-  background-size: 18%;
-  background-position: 12% -9%;
+body #programacao {
+  min-height: 39%;
+  background-image: url(../img/bg-multida.webp);
+  background-blend-mode: multiply;
 }
-html #reinaldo > .container, body #reinaldo > .container {
-  background-image: url(../img/bg-fogos.webp);
-  background-repeat: no-repeat;
-  background-size: 18%;
-  background-position: 100% 100%;
-}
-html #reinaldo .overlay, body #reinaldo .overlay {
-  position: absolute;
-  z-index: 999;
-  right: 19%;
-}
-html #reinaldo .wp-block-embed, body #reinaldo .wp-block-embed {
-  width: 75%;
-  aspect-ratio: 75/42;
-}
-html #reinaldo .wp-block-embed *, body #reinaldo .wp-block-embed * {
-  height: 100%;
-}
-html #reinaldo .wp-block-embed iframe, body #reinaldo .wp-block-embed iframe {
-  width: 100%;
-  height: 100%;
-}
-html #reinaldo h2, body #reinaldo h2 {
+body #programacao h2 {
   font-family: "BoldenVan";
   font-size: 4rem;
   text-transform: uppercase;
   color: #FFF;
   text-align: center;
   margin-top: 2rem;
+  text-shadow: 0 4px 5px rgba(91, 47, 136, 0.75);
 }
-html #reinaldo p, body #reinaldo p {
-  font-family: "bree", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 1.4rem;
-  margin-right: 25%;
-}
-html #programacao, body #programacao {
-  background-image: url(../img/bg-programacao.webp);
-}
-html #programacao h2, body #programacao h2 {
-  font-family: "BoldenVan";
-  font-size: 4rem;
-  text-transform: uppercase;
-  color: #FFF;
-  text-align: center;
-  margin-top: 2rem;
-}
-html #programacao h3, body #programacao h3 {
+body #programacao p {
   width: 100%;
   font-family: "bree", sans-serif;
   font-weight: 600;
+  text-align: center;
+  font-size: 1.2rem;
+  text-shadow: 0 4px 5px rgba(91, 47, 136, 0.75);
 }
-html #programacao .wp-block-table, body #programacao .wp-block-table {
+body #programacao .wp-block-table {
   margin-top: 1.4rem;
   margin-bottom: 4rem;
 }
-html #programacao .wp-block-table.is-style-stripes, body #programacao .wp-block-table.is-style-stripes {
+body #programacao .wp-block-table.is-style-stripes {
   border-bottom: none !important;
 }
-html #programacao .wp-block-table.is-style-stripes tbody tr:nth-child(odd), body #programacao .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+body #programacao .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.5);
 }
-html #programacao img, body #programacao img {
+body #programacao img {
   width: auto;
   height: 200px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-html footer, body footer {
+body #concurso {
+  background-color: #E75511;
+  background-image: url("../img/bg-programacao.webp");
+}
+body #concurso h2 a {
+  color: #fff;
+  text-decoration: none;
+}
+body #atracoes {
+  background-color: #FFD000;
+  background-image: url(../img/bg-atracoes.webp);
+  background-size: cover;
+  background-repeat: repeat-y;
+  min-height: 100%;
+}
+body #atracoes .title-local {
+  background-color: #E75511;
+  width: 30%;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+body #atracoes .atracao.principal {
+  width: 20%;
+}
+body #atracoes .atracao.principal .atracao-item {
+  text-align: center;
+  margin-top: 3rem;
+}
+body #atracoes .atracao.principal .atracao-item h6 {
+  font-family: "BoldenVan", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #FFF;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+}
+body #atracoes .atracao.principal .atracao-item h6 a {
+  color: #05A6E2;
+  text-decoration: none;
+}
+body #atracoes .atracao.principal .atracao-item img {
+  width: 75%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+body #atracoes .atracao.principal .atracao-item#araketu {
+  margin-top: 0;
+}
+body #atracoes .atracao.principal .atracao-item#araketu h6 {
+  font-size: 2rem;
+  background-color: #5B2E88;
+}
+body #atracoes .atracao.principal .atracao-item#araketu h6 a {
+  color: #FFD000;
+  text-decoration: none;
+}
+body #atracoes .atracao.principal .atracao-item#chama-o-sindico img {
+  width: 98%;
+}
+body #atracoes .atracoesLista {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+body #atracoes .atracoesLista li {
+  display: inline-block;
+  border-right: solid 2px #E75511;
+  padding: 0;
+}
+body #atracoes .atracoesLista li:last-child {
+  border-right: 0;
+}
+body #atracoes .atracoesLista li:nth-child(even) a {
+  color: #05A6E2;
+}
+body #atracoes .atracoesLista li a {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 0.9rem;
+  color: #000;
+  opacity: 1;
+}
+body #atracoes .tooltip_templates {
+  display: none;
+}
+body #atracoes .tooltip_templates span {
+  width: 100%;
+  max-width: 400px;
+}
+body #atracoes .tooltip_templates span p {
+  display: flex;
+}
+body #seguranca h3 {
+  color: #E75511;
+}
+body #kids {
+  background-image: url(../img/bg-ekids.webp);
+  background-size: cover;
+  min-height: 400px;
+}
+body #kids .col-lg-12 {
+  background-image: url(../img/rb-ekids.webp);
+  background-repeat: repeat-x;
+  background-size: contain;
+  padding: 1.8rem 0;
+}
+body #kids a {
+  text-decoration: none;
+}
+body #kids h1 {
+  text-transform: uppercase;
+  font-size: 5rem;
+  color: #FFD000;
+  text-shadow: -6px 6px 0 #FFF;
+}
+body .container-fluid h2, body .container-fluid h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+body footer {
   background-color: #FFD000;
   background-image: url(../img/bg-footer.webp);
   background-size: contain;
 }
-
-@media screen and (max-width: 1280px) {
-  #header {
-    min-height: 700px;
-  }
+body footer a {
+  color: #000;
+  text-decoration: none;
 }
+body footer a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 412px) {
   body {
     overflow-x: hidden;
   }
   body #header {
+    height: 100%;
     max-height: 900px;
     overflow: hidden;
-  }
-  body #header .logo {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    margin-left: -180px;
-    text-align: center;
-    height: auto;
   }
   body #header .logo img {
     width: 360px;
@@ -235,5 +310,8 @@ html footer, body footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+  body #atracoes .atracao.principal {
+    width: 100%;
   }
 }/*# sourceMappingURL=meucarnaval2025.css.map */
