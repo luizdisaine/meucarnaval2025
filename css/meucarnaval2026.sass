@@ -1,0 +1,465 @@
+@font-face
+    font-family: 'Oslla'
+    src: url(webfonts/oslla.otf)
+
+@font-face
+    font-family: 'Sink'
+    src: url(webfonts/sink.otf)
+
+$azul: #579CFF
+$amarelo: #FFCE00
+$pink: #FD0786
+$vermelho: #FF1A1A
+$roxa: #6411A3
+
+.bg-azul
+    background-color: $azul
+    color: #FFF
+
+canvas#confetti-canvas
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 9999
+
+.clouds
+    position: fixed
+    display: flex
+    pointer-events: none
+    &.um
+        top: 1.5rem
+        z-index: -5
+        animation: nuvem1 320s linear infinite
+        img
+            height: 34px
+            width: auto
+            filter: blur(3px)
+    &.dois
+        top: 16rem
+        z-index: 1
+        animation: nuvem2 180s linear infinite
+        img
+            height: 42px
+            width: auto
+    &.tres
+        bottom: 2rem
+        z-index: 2
+        animation: nuvem3 90s linear infinite
+        img
+            height: 280px
+            width: auto
+            filter: blur(4px) opacity(0.95)
+    &.quatro
+        bottom: 30%
+        z-index: -4
+        animation: nuvem4 150s linear infinite
+        img
+            height: 60px
+            width: auto
+    &.cinco
+        bottom: 48%
+        z-index: -3
+        animation: nuvem5 160s linear infinite
+        img
+            height: 40px
+            width: auto
+    &.seis
+        top: 7%
+        z-index: -2
+        animation: nuvem6 300s linear infinite
+        img
+            height: 34px
+            width: auto
+            filter: blur(1px)
+@keyframes nuvem1
+    0%
+        left: -90px				
+    100%
+        left: 1240px
+@keyframes nuvem2
+    0%
+        left: 1400px
+        filter: opacity(1)
+    25%
+        filter: opacity(0.95)
+    75%
+        filter: opacity(0.95)              
+    100%
+        filter: opacity(1)
+        left: -100px
+@keyframes nuvem3
+    0%
+        filter: opacity(1)
+        left: -1000px                
+    25%
+        filter: opacity(0.95)
+    75%
+        filter: opacity(0.95)
+    100%
+        left: 1400px
+        filter: opacity(1)
+@keyframes nuvem4
+    0%
+        left: 1600px                
+    100%
+        left: -800px
+@keyframes nuvem5
+    0%
+        left: -200px                
+    100%
+        left: 1600px
+@keyframes nuvem6
+    0%
+        left: 1500px                
+    100%
+        left: -200px
+.ycd-all-content-wrapper.ycd-countdown-content-wrapper-192
+    position: absolute
+    width: 100%
+    bottom: 12%
+    z-index: 1234
+html, body
+    height: 100%
+body
+    background-image: url(../img/bg-ceu.webp)
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-position: center
+    overflow-x: hidden
+    h1, h2, h3, h4, h5, h6
+        font-family: 'Sink', sans-serif
+    &.page-template-page-votacao-concurso-fantasia
+        .ycd-all-content-wrapper
+            display: none
+        #header
+            position: relative
+            height: 40%
+            .custom-logo-link
+                img
+                    max-height: 250px
+                    width: auto
+            .down
+                display: none
+        #main
+            h2
+                color: #FFF
+                text-align: center
+                text-transform: uppercase
+                margin-bottom: 2rem
+            .col-lg-9,
+            .wpforms-container
+                position: relative
+                z-index: 32
+                div.wpforms-container-full .wpforms-confirmation-container-full,
+                div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirection-message)
+                    background-color: $amarelo
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2)
+                    padding: 2rem
+                    border-radius: 1rem
+                    .wpforms-poll-answer-percent
+                        display: flex
+                        font-size: 0.85rem
+                        opacity: 0.75
+                        span
+                            margin: auto 0 0 0.25rem
+                            float: right
+                        .wpforms-poll-answer-count
+                            font-weight: 700
+                            font-size: 1.4rem
+                            color: #000
+                            float: left
+    .countdown
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        z-index: 1234
+        background-color: rgba(255,255,255,0.25)
+    &.admin-bar
+        .countdown
+            top: 32px
+    #header
+        position: relative
+        height: 100%
+        .row
+            height: 100%
+        .custom-logo-link
+            display: block
+            text-align: center
+            margin: auto
+            img
+                height: 100%
+                max-height: 400px
+                height: auto
+        .down
+            font-size: 6rem
+            color: $amarelo
+            margin: 2rem auto 0 auto
+        ul.menu
+            margin: 1rem auto
+            list-style: none
+            text-align: center
+            li
+                display: inline-block
+                margin: 0.75rem
+                a
+                    display: block
+                    border-radius: 2rem
+                    padding: 8px 20px
+                    color: #FFF        
+                    font-weight: 700
+                    text-decoration: none      
+    
+    #programacao
+        min-height: 39%
+        background-image: url(../img/bg-multida.webp)
+        background-blend-mode: multiply
+        h2
+            font-family: 'BoldenVan'
+            font-size: 4rem
+            text-transform: uppercase
+            color: #FFF
+            text-align: center
+            margin-top: 2rem
+            text-shadow: 0 4px 5px rgba(91,47,136,0.75)
+        p
+            width: 100%
+            font-family: 'bree', sans-serif
+            font-weight: 600
+            text-align: center
+            font-size: 1.2rem
+            text-shadow: 0 4px 5px rgba(91,47,136,0.75)
+        .wp-block-table
+            margin-top: 1.4rem
+            margin-bottom: 4rem
+            &.is-style-stripes
+                border-bottom: none !important
+                tbody tr:nth-child(odd)
+                    background-color: rgba(0,0,0,0.5)
+        img
+            width: auto
+            height: 200px
+            box-shadow: 0 0 10px rgba(0,0,0,0.5)
+
+    #concurso
+        background-image: url('../img/bg-programacao.webp')
+        h2
+            a
+                color: #fff
+                text-decoration: none
+    #atracoes
+        .title-local
+            width: 30%
+            color: #FFF
+            padding: 0.5rem 0.75rem
+            text-align: center
+            border-radius: 0.5rem
+            margin-left: auto
+            margin-right: auto
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5)
+        .atracao.principal
+            width: 20%
+            .atracao-item
+                text-align: center
+                margin-top: 3rem
+                h6
+                    font-family: 'Oslla',sans-serif
+                    font-weight: 600
+                    text-transform: uppercase
+                    text-align: center
+                    text-transform: uppercase
+                    background-color: #FFF
+                    padding: 0.5rem
+                    border-radius: 0.75rem
+                    a
+                        color: $azul
+                        text-decoration: none
+                img
+                    width: 75%
+                    height: auto
+                    margin: auto
+                    text-align: center
+            .atracao-item#araketu
+                margin-top: 0
+                h6
+                    font-size: 2rem
+                    a
+                        text-decoration: none
+            .atracao-item#chama-o-sindico
+                img
+                    width: 98%
+        .atracoesLista
+            list-style: none
+            text-align: center
+            padding: 0
+            li
+                display: inline-block
+                border-right: solid 2px #F00
+                padding: 0
+                &:last-child
+                    border-right: 0
+                &:nth-child(even)
+                    a
+                        color: #FFF
+                a
+                    padding: 0.5rem
+                    text-transform: uppercase
+                    text-decoration: none
+                    font-weight: 900
+                    font-size: 0.9rem
+                    color: $amarelo
+                    opacity: 1
+                    text-shadow: 0 1px 3px rgba(0,0,0,0.5)
+        .tooltip_templates
+            display: none
+            span
+                width: 100%
+                max-width: 400px
+                p
+                    display: flex
+
+    #cards
+        position: relative
+        z-index: 10
+        .col-lg-4
+            padding: 0 1rem 1rem 1rem
+            margin-bottom: 2rem
+            .card
+                position: relative
+                display: flex
+                height: 240px
+                border: none
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2)
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+                h5
+                    margin: auto auto 4rem auto
+                    width: 60%
+                    text-transform: uppercase
+                    color: #fff
+                    font-size: 1.6rem
+                    text-shadow: 0 2px 4px rgba(0,0,0,0.7)
+                .overlay
+                    display: none
+                    position: absolute
+                &:hover
+                    .overlay
+                        display: flex
+                        flex-direction: column
+                        background-color: rgba(0,0,0,0.7)
+                        color: #FFF
+                        width: 100%
+                        height: 100%
+                        padding: 1rem
+                        box-sizing: border-box
+                        border-radius: 0.25rem
+                        h5
+                            color: #FFF
+                        p
+                            margin: auto auto 0 auto
+                        button
+                            margin: 0.75rem auto auto auto
+                            align-self: center
+
+    #kids
+        background-image: url(../img/bg-ekids.webp)
+        background-size: cover
+        min-height: 400px
+        .col-lg-12
+            background-image: url(../img/rb-ekids.webp)
+            background-repeat: repeat-x
+            background-size: contain
+            padding: 1.8rem 0
+        a
+            text-decoration: none
+        h1
+            text-transform: uppercase
+            font-size: 5rem
+            text-shadow: -6px 6px 0 #FFF
+
+    .container-fluid
+        h2, h3
+            text-align: center
+            text-transform: uppercase
+
+    footer
+        a
+            color: #000
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+
+    .modal-header
+        background-color: $roxa
+        color: $amarelo
+        .btn-close
+            display: flex
+            align-items: center
+            background: rgba(255,255,255,0.25)
+            opacity: 1
+            i
+                font-size: 1.5rem               
+                color: #FFF
+        h5
+            text-transform: uppercase
+            font-size: 1.6rem
+    .modal-body
+        padding: 1rem 2rem
+        h1, h2
+            font-family: 'Oslla', sans-serif
+            text-transform: uppercase
+            font-size: 1.2rem
+            color: $vermelho
+        h3, h4, h5, h6
+            font-size: 1rem
+            font-family: 'Oslla', sans-serif
+            color: $pink
+
+//@media screen and (max-width: 1280px)
+//    #header
+//        min-height: 700px
+
+@media screen and (max-width: 412px)
+    body
+        overflow-x: hidden
+        #header
+            height: 100%
+            max-height: 900px
+            overflow: hidden
+            .custom-logo-link
+                img
+                    width: 340px
+                    height: auto
+            .col-lg-4
+                height: 33.333333333%
+                &#itabirito_hd
+                    &:hover
+                        background-position: center 15%
+        .overlay
+            display: none
+        #reinaldo
+            .wp-block-embed
+                width: 100%
+                aspect-ratio: 16 / 9
+            p
+                margin-right: 0
+        #programacao
+            h2
+                font-size: 3rem
+            h3
+                font-size: 1.2rem
+            .wp-block-table
+                margin-top: 1rem
+                margin-bottom: 2rem
+                img
+                    height: 150px
+            footer
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+        
+        #atracoes
+            .atracao.principal
+                width: 100%

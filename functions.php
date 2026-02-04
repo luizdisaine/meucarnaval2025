@@ -10,11 +10,21 @@ function meucarnaval2025_enqueue_scripts() {
     // Bootstrap CSS
     wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css');
 
+    // Tooltip CSS
+    wp_enqueue_style('tooltip-css', get_template_directory_uri(  ).'/css/tooltipster.bundle.min.css', array(), null, false);
+
     // Bootstrap JS
-    wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js', array('jquery'), null, true);
+    wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js', array(), null, true);
 
     // Confetti
-    wp_enqueue_script('confetti', get_stylesheet_directory_uri(  ).'/js/confetti.js', array('jquery'), null, true);
+    wp_enqueue_script('confetti', get_stylesheet_directory_uri(  ).'/js/confetti.js', array(), null, true);
+
+    // Tooltip
+    wp_enqueue_script('tooltip', get_stylesheet_directory_uri(  ).'/js/tooltipster.bundle.min.js', array(), null, true);
+
+    // AJAX
+    wp_enqueue_script('ajax_js', get_stylesheet_directory_uri().'/js/ajax.js', array(), null, true);
+	wp_localize_script('ajax_js', 'ajax_post', array('ajaxurl' => admin_url('admin-ajax.php')));
 }
 add_action('wp_enqueue_scripts', 'meucarnaval2025_enqueue_scripts');
 
@@ -53,4 +63,11 @@ function meucarnaval2025_widgets_init() {
     ));
 }
 add_action('widgets_init', 'meucarnaval2025_widgets_init');
+
+// Enable excerpts for pages
+add_post_type_support('page', 'excerpt');
+
+require_once( __DIR__ .'/inc/post_type.php');
+require_once( __DIR__ .'/inc/ajax.php');
+
 ?>
