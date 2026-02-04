@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "BoldenVan";
+  src: url(webfonts/bolden.ttf);
+}
+.bg-vermelho {
+  background-color: #E75511;
+  color: #fff;
+}
+
+.bg-roxo {
+  background-color: #5B2E88;
+  color: #fff;
+}
+
+.bg-azul {
+  background-color: #05A6E2;
+  color: #FFF;
+}
+
+.bg-amarelo {
+  background-color: #FFD000;
+}
+
+canvas#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+html, body {
+  height: 100%;
+}
+html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "bree regular", sans-serif;
+}
+html #header, body #header {
+  position: relative;
+  height: 85%;
+}
+html #header .logo, body #header .logo {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  margin-left: -290px;
+  text-align: center;
+  height: auto;
+}
+html #header .logo img, body #header .logo img {
+  width: 580px;
+  height: auto;
+}
+html #header div, body #header div {
+  height: 100%;
+}
+html #header .col-lg-4, body #header .col-lg-4 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  background-color: #FFD000;
+  background-blend-mode: overlay;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html #header .col-lg-4#acurui_hd, body #header .col-lg-4#acurui_hd {
+  background-image: url(../img/acurui.webp);
+}
+html #header .col-lg-4#acurui_hd:hover, body #header .col-lg-4#acurui_hd:hover {
+  background-image: url(../img/acurui-hover.webp);
+}
+html #header .col-lg-4#itabirito_hd, body #header .col-lg-4#itabirito_hd {
+  background-image: url(../img/estacao.webp);
+}
+html #header .col-lg-4#itabirito_hd:hover, body #header .col-lg-4#itabirito_hd:hover {
+  background-image: url(../img/reinaldinho.webp);
+}
+html #header .col-lg-4#sgbacao_hd, body #header .col-lg-4#sgbacao_hd {
+  background-image: url(../img/bacao.webp);
+}
+html #header .col-lg-4#sgbacao_hd:hover, body #header .col-lg-4#sgbacao_hd:hover {
+  background-image: url(../img/bacao-hover.webp);
+}
+html #header .col-lg-4:hover, body #header .col-lg-4:hover {
+  background-blend-mode: normal;
+}
+html #header .col-lg-4 h3, html #header .col-lg-4 h4, body #header .col-lg-4 h3, body #header .col-lg-4 h4 {
+  margin-bottom: auto;
+  margin-top: 2rem;
+  font-family: "BoldenVan";
+}
+html #header .col-lg-4 a, body #header .col-lg-4 a {
+  color: #fff;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+html #reinaldo, body #reinaldo {
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/bg-flor.webp);
+  background-repeat: no-repeat;
+  background-size: 18%;
+  background-position: 12% -9%;
+}
+html #reinaldo > .container, body #reinaldo > .container {
+  background-image: url(../img/bg-fogos.webp);
+  background-repeat: no-repeat;
+  background-size: 18%;
+  background-position: 100% 100%;
+}
+html #reinaldo .overlay, body #reinaldo .overlay {
+  position: absolute;
+  z-index: 999;
+  right: 19%;
+}
+html #reinaldo .wp-block-embed, body #reinaldo .wp-block-embed {
+  width: 75%;
+  aspect-ratio: 75/42;
+}
+html #reinaldo .wp-block-embed *, body #reinaldo .wp-block-embed * {
+  height: 100%;
+}
+html #reinaldo .wp-block-embed iframe, body #reinaldo .wp-block-embed iframe {
+  width: 100%;
+  height: 100%;
+}
+html #reinaldo h2, body #reinaldo h2 {
+  font-family: "BoldenVan";
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #FFF;
+  text-align: center;
+  margin-top: 2rem;
+}
+html #reinaldo p, body #reinaldo p {
+  font-family: "bree", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.4rem;
+  margin-right: 25%;
+}
+html #programacao, body #programacao {
+  background-image: url(../img/bg-programacao.webp);
+}
+html #programacao h2, body #programacao h2 {
+  font-family: "BoldenVan";
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #FFF;
+  text-align: center;
+  margin-top: 2rem;
+}
+html #programacao h3, body #programacao h3 {
+  width: 100%;
+  font-family: "bree", sans-serif;
+  font-weight: 600;
+}
+html #programacao .wp-block-table, body #programacao .wp-block-table {
+  margin-top: 1.4rem;
+  margin-bottom: 4rem;
+}
+html #programacao .wp-block-table.is-style-stripes, body #programacao .wp-block-table.is-style-stripes {
+  border-bottom: none !important;
+}
+html #programacao .wp-block-table.is-style-stripes tbody tr:nth-child(odd), body #programacao .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+html #programacao img, body #programacao img {
+  width: auto;
+  height: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+html footer, body footer {
+  background-color: #FFD000;
+  background-image: url(../img/bg-footer.webp);
+  background-size: contain;
+}
+
+@media screen and (max-width: 1280px) {
+  #header {
+    min-height: 700px;
+  }
+}
+@media screen and (max-width: 412px) {
+  body {
+    overflow-x: hidden;
+  }
+  body #header {
+    max-height: 900px;
+    overflow: hidden;
+  }
+  body #header .logo {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin-left: -180px;
+    text-align: center;
+    height: auto;
+  }
+  body #header .logo img {
+    width: 360px;
+    height: auto;
+  }
+  body #header .col-lg-4 {
+    height: 33.333333333%;
+  }
+  body #header .col-lg-4#itabirito_hd:hover {
+    background-position: center 15%;
+  }
+  body .overlay {
+    display: none;
+  }
+  body #reinaldo .wp-block-embed {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  body #reinaldo p {
+    margin-right: 0;
+  }
+  body #programacao h2 {
+    font-size: 3rem;
+  }
+  body #programacao h3 {
+    font-size: 1.2rem;
+  }
+  body #programacao .wp-block-table {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  body #programacao .wp-block-table img {
+    height: 150px;
+  }
+  body #programacao footer {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}/*# sourceMappingURL=meucarnaval2025.css.map */

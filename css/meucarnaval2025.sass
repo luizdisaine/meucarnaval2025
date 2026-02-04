@@ -1,0 +1,193 @@
+@font-face
+    font-family: 'BoldenVan'
+    src: url(webfonts/bolden.ttf)
+
+$vermelho: #E75511
+$roxo: #5B2E88
+$azul: #05A6E2
+$amarelo: #FFD000
+
+.bg-vermelho
+    background-color: $vermelho
+    color: #fff
+.bg-roxo
+    background-color: $roxo
+    color: #fff
+.bg-azul
+    background-color: $azul
+    color: #FFF
+.bg-amarelo
+    background-color: $amarelo
+
+canvas#confetti-canvas
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 9999
+
+html, body
+    height: 100%
+    h1, h2, h3, h4, h5, h6
+        font-family: 'bree regular', sans-serif
+    #header
+        position: relative
+        height: 85%
+        .logo
+            position: absolute
+            top: 61%
+            left: 50%
+            margin-left: -290px
+            text-align: center
+            height: auto
+            img
+                width: 580px
+                height: auto
+        div
+            height: 100%
+        .col-lg-4
+            display: flex
+            flex-direction: column
+            height: 100%
+            text-align: center
+            background-color: $amarelo
+            background-blend-mode: overlay
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            &#acurui_hd
+                background-image: url(../img/acurui.webp)
+                &:hover
+                    background-image: url(../img/acurui-hover.webp)
+            &#itabirito_hd
+                background-image: url(../img/estacao.webp)
+                &:hover
+                    background-image: url(../img/reinaldinho.webp)
+            &#sgbacao_hd
+                background-image: url(../img/bacao.webp)
+                &:hover
+                    background-image: url(../img/bacao-hover.webp)
+            &:hover
+                background-blend-mode: normal
+            h3, h4
+                margin-bottom: auto
+                margin-top: 2rem
+                font-family: 'BoldenVan'
+            a
+                color: #fff
+                text-shadow: 0 2px 3px rgba(0,0,0,0.5)
+                text-decoration: none
+    #reinaldo
+        position: relative
+        overflow: hidden
+        background-image: url(../img/bg-flor.webp)
+        background-repeat: no-repeat
+        background-size: 18%
+        background-position: 12% -9%
+        &>.container
+            background-image: url(../img/bg-fogos.webp)
+            background-repeat: no-repeat
+            background-size: 18%
+            background-position: 100% 100%
+        .overlay
+            position: absolute
+            z-index: 999
+            right: 19%
+        .wp-block-embed
+            width: 75%
+            aspect-ratio: 75 / 42
+            *
+                height: 100%
+            iframe
+                width: 100%
+                height: 100%
+        h2
+            font-family: 'BoldenVan'
+            font-size: 4rem
+            text-transform: uppercase
+            color: #FFF
+            text-align: center
+            margin-top: 2rem
+        p
+            font-family: 'bree', sans-serif
+            font-weight: 200
+            font-style: normal
+            font-size: 1.4rem
+            margin-right: 25%
+    
+    #programacao
+        background-image: url(../img/bg-programacao.webp)
+        h2
+            font-family: 'BoldenVan'
+            font-size: 4rem
+            text-transform: uppercase
+            color: #FFF
+            text-align: center
+            margin-top: 2rem
+        h3
+            width: 100%
+            font-family: 'bree', sans-serif
+            font-weight: 600
+        .wp-block-table
+            margin-top: 1.4rem
+            margin-bottom: 4rem
+            &.is-style-stripes
+                border-bottom: none !important
+                tbody tr:nth-child(odd)
+                    background-color: rgba(0,0,0,0.5)
+        img
+            width: auto
+            height: 200px
+            box-shadow: 0 0 10px rgba(0,0,0,0.5)
+
+    footer
+        background-color: $amarelo
+        background-image: url(../img/bg-footer.webp)
+        background-size: contain
+
+@media screen and (max-width: 1280px)
+    #header
+        min-height: 700px
+
+@media screen and (max-width: 412px)
+    body
+        overflow-x: hidden
+        #header
+            max-height: 900px
+            overflow: hidden
+            .logo
+                position: absolute
+                top: 80%
+                left: 50%
+                margin-left: -180px
+                text-align: center
+                height: auto
+                img
+                    width: 360px
+                    height: auto
+            .col-lg-4
+                height: 33.333333333%
+                &#itabirito_hd
+                    &:hover
+                        background-position: center 15%
+        .overlay
+            display: none
+        #reinaldo
+            .wp-block-embed
+                width: 100%
+                aspect-ratio: 16 / 9
+            p
+                margin-right: 0
+        #programacao
+            h2
+                font-size: 3rem
+            h3
+                font-size: 1.2rem
+            .wp-block-table
+                margin-top: 1rem
+                margin-bottom: 2rem
+                img
+                    height: 150px
+            footer
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
